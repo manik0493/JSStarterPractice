@@ -1,4 +1,20 @@
 import {getUsers} from './api/userApi';
+import angular from 'angular';
+
+
+angular.module("Myapp",[])
+.controller("MainController",MainController)
+
+
+function MainController($scope)
+{
+  $scope.hello="Hello World!";
+}
+
+
+
+ 
+
 
 getUsers().then(result=>{
   let usersBody="";
